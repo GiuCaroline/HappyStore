@@ -5,7 +5,18 @@ export default {
     "./src/**/*.{js,jsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        montserrat: ['Montserrat', 'sans-serif'],
+        italiana: ['Italiana', 'serif'],
+      },
+      colors: {
+        'branco': '#FAFAFA',
+        'preto': '#121212',
+        'laranja': '#FE6100',
+        'laranjaEscuro': '#C84A00',
+      },
+    },
   },
   plugins: [],
 }
