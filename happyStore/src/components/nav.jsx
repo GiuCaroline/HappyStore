@@ -7,16 +7,15 @@ export default function Nav(){
   const [open, setOpen] = useState(false);
     return(
         <nav className="w-full bg-laranja text-white text-3xlw font-montserrat py-4 items-center px-2 flex justify-between">
-            <img
+            <a href='#home' className='ml-[2%]'><img
                 src="./images/logo.png"
-                className="ml-[2%] cursor-pointer selection:bg-branco"
-                href='#home'
-            />
+                className=" cursor-pointer selection:bg-branco"
+            /></a>
             <div className="flex gap-10 mr-[2%] items-center">
                 <a href='#sobre' className="cursor-pointer hover:text-laranjaEscuro selection:bg-branco selection:text-laranja">
                     <li className="list-none hover:text-laranjaEscuro text-branco text-xl">Sobre</li>
                 </a>
-                <a className="cursor-pointer hover:text-laranjaEscuro selection:bg-branco selection:text-laranja">
+                <a href='#catalogo' className="cursor-pointer hover:text-laranjaEscuro selection:bg-branco selection:text-laranja">
                     <li className="list-none hover:text-laranjaEscuro text-branco text-xl">Catálogo</li>
                 </a>
                 <a className="cursor-pointer hover:text-laranjaEscuro selection:bg-branco selection:text-laranja">

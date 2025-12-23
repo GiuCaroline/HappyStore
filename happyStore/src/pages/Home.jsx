@@ -1,4 +1,6 @@
 import { BookOpenText  } from '@phosphor-icons/react';
+import { ProductCard } from "../components/productCard";
+import LocationSection from "../components/locationSection";
 
 export default function Home(){
     return(
@@ -20,7 +22,7 @@ export default function Home(){
                 </div>
             </div>
 
-            <div className='mt-[3%] px-[2%]' id='sobre'>
+            <div className='mt-[3%] px-[3%]' id='sobre'>
                 <div className='flex items-center gap-3'>
                     <div className="w-[10%] flex-1 h-[1px] dark:bg-branco bg-preto rounded-full
                      selection:bg-laranja selection:text-branco"></div>
@@ -48,7 +50,42 @@ export default function Home(){
 
             <div className='bg-laranja w-full mt-[6%] p-5 py-10' id='catalogo'>
                 <p className='justify-center flex text-branco underline italic text-2xl selection:bg-branco selection:text-laranja'>Conheça um pouco das nossas roupas</p>
-                <p>oii</p>
+                <div className="mt-[3%] grid grid-cols-1 md:grid-cols-3 gap-[10%] max-w-6xl mx-auto">
+                    <ProductCard
+                    image="/images/vestido.png"
+                    title="Vestido Azul"
+                    description="Vestido infantil confeccionado em tecido macio e confortável, na cor azul claro com estampa delicada de poás. Possui modelagem soltinha, alças com babados e fechamento prático."
+                    />
+
+                    <ProductCard
+                    image="/images/camisa-vermelha.png"
+                    title="Camiseta Vermelha"
+                    description="Camiseta polo infantil confeccionada em tecido macio e confortável, na cor vermelha. Possui gola tradicional com detalhes em branco e fechamento por botões."
+                    />
+
+                    <ProductCard
+                    image="/images/camisa-decorada.png"
+                    title="Camiseta Decorada"
+                    description="Conjunto infantil confeccionado em tecido macio e confortável, composto por camiseta polo estampada com desenhos divertidos e shorts combinando."
+                    />
+                </div>
+
+                <div className='w-full flex justify-center mt-[5%]'>
+                    <button className='selection:bg-laranja selection:text-branco
+                    text-laranja bg-branco rounded-full py-4 text-xl px-20 transition duration-500 transform-cpu hover:scale-105'>Veja nosso catálogo completo</button>
+                </div>
+            </div>
+
+            <div className='mt-[4%] px-[3%]'>
+                <div className='flex items-center gap-3'>
+                    <p className='dark:text-branco text-preto text-3xl
+                        selection:bg-laranja selection:text-branco'>Onde estamos</p>
+                    <div className="w-[10%] flex-1 h-[1px] dark:bg-branco bg-preto rounded-full
+                        selection:bg-laranja selection:text-branco"></div>
+                </div>
+
+                <LocationSection />
+
             </div>
         </div>
     )
