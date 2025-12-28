@@ -28,7 +28,7 @@ export default function LocationSection() {
         </p>
 
         {/* BOTÕES */}
-        <div className="flex flex-col gap-3 mt-4">
+        <div className="flex flex-col gap-3 mt-4 bg-laranja">
           {/* WhatsApp */}
           <a
             href={`https://wa.me/5511999999999?text=${encodeURIComponent(
@@ -36,7 +36,7 @@ export default function LocationSection() {
             )}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-orange-500 hover:bg-orange-600 transition text-white px-6 py-3 rounded-xl flex items-center justify-center gap-2"
+            className=" hover:bg-orange-600 transition text-branco px-6 py-3 rounded-xl flex items-center justify-start gap-2"
           >
             Entrar em contato conosco
           </a>
@@ -59,7 +59,7 @@ export default function LocationSection() {
       </div>
 
       {/* MAPA */}
-      <div className="w-full h-full rounded-2xl overflow-hidden">
+      <div className="w-[95%] h-full rounded-2xl overflow-hidden mt-[2%]">
         <iframe
           title="Mapa"
           src={`https://www.google.com/maps?q=${encodedAddress}&output=embed`}

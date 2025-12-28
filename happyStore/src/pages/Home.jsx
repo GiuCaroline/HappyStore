@@ -27,14 +27,14 @@ export default function Home(){
                     <div className="w-[10%] flex-1 h-[1px] dark:bg-branco bg-preto rounded-full
                      selection:bg-laranja selection:text-branco"></div>
                     <p className='dark:text-branco text-preto text-3xl
-                     selection:bg-laranja selection:text-branco'>Sobre nós</p>
+                     selection:bg-laranja selection:text-branco cursor-default'>Sobre nós</p>
                     <div className="w-[10%] flex-1 h-[1px] dark:bg-branco bg-preto rounded-full
                      selection:bg-laranja selection:text-branco"></div>
                 </div>
 
                 <div className='justify-between flex mt-[2%] items-center gap-[20%]'>
                     <p className='ml-[5%] dark:text-branco text-preto text-2xl
-                     selection:bg-laranja selection:text-branco'>A HAPPY Store nasceu para levar mais estilo e<br/>
+                     selection:bg-laranja selection:text-branco cursor-default'>A HAPPY Store nasceu para levar mais estilo e<br/>
                     felicidade ao seu dia a dia. Trabalhamos com moda
                     feminina, masculina e infantil, unindo qualidade,
                     conforto e tendências que valorizam cada estilo.
@@ -79,7 +79,7 @@ export default function Home(){
             <div className='mt-[4%] px-[3%]'>
                 <div className='flex items-center gap-3'>
                     <p className='dark:text-branco text-preto text-3xl
-                        selection:bg-laranja selection:text-branco'>Onde estamos</p>
+                        selection:bg-laranja selection:text-branco cursor-default'>Onde estamos</p>
                     <div className="w-[10%] flex-1 h-[1px] dark:bg-branco bg-preto rounded-full
                         selection:bg-laranja selection:text-branco"></div>
                 </div>
