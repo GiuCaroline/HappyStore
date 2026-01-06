@@ -10,6 +10,13 @@ export default function Nav({ darkMode, isDark }) {
     document.body.style.overflow = menuOpen ? "hidden" : "auto";
   }, [menuOpen]);
 
+  const mobileLabels = {
+    home: "Início",
+    sobre: "Sobre",
+    catalogo: "Catálogo",
+    endereco: "Endereço",
+    footer: "Contato",
+  };
   return (
     <nav className="fixed top-0 left-0 w-full z-50 bg-laranja shadow-xl font-montserrat py-1">
       
@@ -87,7 +94,7 @@ export default function Nav({ darkMode, isDark }) {
 
       {/* MENU MOBILE */}
       {menuOpen && (
-        <div className="fixed top-0 right-0 h-screen w-[80vw] bg-laranja text-branco flex flex-col items-center justify-center gap-8 text-2xl z-50">
+        <div className="fixed top-0 right-0 h-screen w-[60vw] bg-laranja text-branco flex flex-col items-center justify-center gap-8 text-2xl z-50">
           
           <button
             onClick={() => {
@@ -106,11 +113,7 @@ export default function Nav({ darkMode, isDark }) {
               onClick={() => setMenuOpen(false)}
               className="hover:text-laranjaEscuro transition"
             >
-              {item === "home"
-                ? "Início"
-                : item === "footer"
-                ? "Contato"
-                : item.charAt(0).toUpperCase() + item.slice(1)}
+              {mobileLabels[item]}
             </a>
           ))}
 
