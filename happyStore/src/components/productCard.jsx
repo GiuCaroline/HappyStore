@@ -17,12 +17,12 @@ export function ProductCard({ image, title, description }) {
 
       {/* Conteúdo */}
       <div className="p-4 flex flex-col gap-2">
-        <h3 className="font-semibold text-xl text-center selection:bg-laranja selection:text-branco">
+        <h3 className="font-semibold text-xl cursor-default text-center selection:bg-laranja selection:text-branco">
           {title}
         </h3>
 
         <p
-          className={`text-sm text-gray-600 transition-all text-center selection:bg-laranja selection:text-branco
+          className={`text-sm text-gray-600 transition-all cursor-default text-center selection:bg-laranja selection:text-branco
           ${open ? "line-clamp-none" : "line-clamp-3"}`}
         >
           {description}
@@ -30,7 +30,7 @@ export function ProductCard({ image, title, description }) {
 
         <button
           onClick={() => setOpen(!open)}
-          className="text-orange-500 text-sm font-medium self-center mt-2 hover:underline  selection:bg-laranja selection:text-branco"
+          className="text-laranja text-sm font-medium self-center mt-2 hover:underline selection:bg-laranja selection:text-branco"
         >
           {open ? "Ver menos" : "Ver mais"}
         </button>

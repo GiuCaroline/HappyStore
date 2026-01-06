@@ -85,11 +85,11 @@ function App() {
   return (
     <div className="min-h-screen bg-branco dark:bg-preto transition-colors duration-300 ease-in-out">
       <Nav darkMode={toggleDarkMode} isDark={isDark} />
-
-      <Routes>
-        <Route path="/" element={<Home />} />
-      </Routes>
-
+      <main className='pt-[95px]'>
+        <Routes>
+          <Route path="/" element={<Home />} />
+        </Routes>
+      </main>
       <Footer />
     </div>
   )

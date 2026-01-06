@@ -7,8 +7,12 @@ export default function LocationSection() {
   const encodedAddress = encodeURIComponent(address);
 
   return (
-    <section className="dark:bg-[#252525] bg-[#F3F3F3] w-full mt-[2%] rounded-[30px] px-[4%] text-white py-[2%]
-     rounded-2xl grid grid-cols-1 md:grid-cols-2 gap-8 font-montserrat shadow-xl mb-[5%]">
+    <section className="
+      dark:bg-[#252525] bg-[#F3F3F3] w-full mt-[2%]
+      rounded-[30px] px-[4%] py-[2%]
+      grid grid-cols-1 md:grid-cols-2 gap-8
+      font-montserrat shadow-xl mb-[5%]
+    ">
       
       {/* TEXTO */}
       <div className="flex flex-col gap-4">
@@ -36,38 +40,40 @@ export default function LocationSection() {
         </p>
 
         {/* BOTÕES */}
-        <div className="flex flex-col gap-3 mr-[2%] mt-[3%] bg-laranja rounded-[30px] py-5 px-2">
-          {/* WhatsApp */}
+        <div className="
+          flex flex-col gap-3 mt-[3%] mr-[2%]
+          bg-laranja rounded-[30px] py-5 px-2
+        ">
           <a
             href={`https://wa.me/551143094666?text=${encodeURIComponent(
               "Olá! Gostaria de saber mais sobre a loja!"
             )}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-laranjaEscuro transition text-branco px-6 py-3 text-lg flex items-center justify-start gap-2
-          selection:text-laranja selection:bg-branco"
+            className="hover:text-laranjaEscuro transition text-branco
+              px-6 py-3 text-lg flex items-center gap-2
+              selection:text-laranja selection:bg-branco"
           >
             <WhatsappLogo size={35}/>
             Entrar em contato conosco
           </a>
 
-          {/* Como chegar */}
           <a
             href={`https://www.google.com/maps/dir/?api=1&destination=${encodedAddress}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-branco hover:text-laranjaEscuro transition text-lg px-6 py-3 rounded-xl flex items-center justify-start gap-2
-          selection:text-laranja selection:bg-branco"
+            className="text-branco hover:text-laranjaEscuro transition
+              text-lg px-6 py-3 flex items-center gap-2
+              selection:text-laranja selection:bg-branco"
           >
             <MapPinArea size={35}/>
             Como chegar
           </a>
         </div>
-
       </div>
 
       {/* MAPA */}
-      <div className="w-full h-full rounded-2xl overflow-hidden mt-[2%]">
+      <div className="w-full rounded-2xl overflow-hidden mt-[2%] h-[280px] md:h-full">
         <iframe
           title="Mapa"
           src={`https://www.google.com/maps?q=${encodedAddress}&output=embed`}
@@ -75,14 +81,23 @@ export default function LocationSection() {
           loading="lazy"
         ></iframe>
       </div>
-      
-        <p className="w-[200%] text-xl dark:text-branco text-preto flex gap-1 items-center cursor-default
-          selection:dark:text-laranja selection:dark:bg-branco
+
+      {/* TEXTO FINAL */}
+      <p className="
+        text-xl dark:text-branco text-preto flex gap-1 items-center
+        cursor-default mt-4
+        w-full text-center justify-center
+        lg:w-[200%] lg:text-left lg:justify-start
+        selection:dark:text-laranja selection:dark:bg-branco
+        selection:text-branco selection:bg-laranja
+      ">
+        Esperamos você para conhecer nossa coleção e sair vestindo
+        <span className="text-laranja flex gap-2 items-center
           selection:text-branco selection:bg-laranja">
-          Esperamos você para conhecer nossa coleção e sair vestindo
-          <span className="text-laranja flex gap-2 items-center
-          selection:text-branco selection:bg-laranja"> felicidade <Sparkle size={25} /></span>
-        </p>
+          felicidade <Sparkle size={25} />
+        </span>
+      </p>
+
     </section>
   );
 }
