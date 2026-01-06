@@ -3,3 +3,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.preto-e-branco {
+  filter: grayscale(100%);
+}

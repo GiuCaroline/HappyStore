@@ -8,7 +8,7 @@ export default function Home(){
             <div className="relative w-full h-auto" id='home'>
                 <img 
                     src="./images/banner.jpeg"
-                    className="w-full h-[90vh] object-cover selection:bg-branco"
+                    className="w-full h-[80vh] object-cover selection:bg-branco"
                 />
                 <div className="absolute inset-0 bg-black/40 selection:bg-branco"></div>
                 <div className="absolute inset-0 flex items-center justify-start ml-[10%]">
@@ -76,7 +76,7 @@ export default function Home(){
                 </div>
             </div>
 
-            <div className='mt-[4%] px-[3%]'>
+            <div id="endereco" className='mt-[4%] px-[3%]'>
                 <div className='flex items-center gap-3'>
                     <p className='dark:text-branco text-preto text-3xl
                         selection:bg-laranja selection:text-branco cursor-default'>Onde estamos</p>
@@ -85,7 +85,6 @@ export default function Home(){
                 </div>
 
                 <LocationSection />
-
             </div>
         </div>
     )
