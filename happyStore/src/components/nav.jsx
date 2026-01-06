@@ -1,11 +1,14 @@
 import { MoonStars, Sun, List, X } from "@phosphor-icons/react";
 import { AArrowUp, AArrowDown, Eclipse } from 'lucide-react'
 import { PersonArmsSpread } from "@phosphor-icons/react";
-import { useState } from "react";
+import { useState, useEffect } from "react"; 
 
 export default function Nav({ darkMode, isDark }) {
   const [menuOpen, setMenuOpen] = useState(false);
   const [accessOpen, setAccessOpen] = useState(false);
+  useEffect(() => {
+    document.body.style.overflow = menuOpen ? "hidden" : "auto";
+  }, [menuOpen]);
 
   return (
     <nav className="fixed top-0 left-0 w-full z-50 bg-laranja shadow-xl font-montserrat py-1">
@@ -72,10 +75,20 @@ export default function Nav({ darkMode, isDark }) {
         </button>
       </div>
 
+      {menuOpen && (
+        <div
+          className="fixed inset-0 bg-preto/40 backdrop-blur-sm z-40"
+          onClick={() => {
+            setMenuOpen(false);
+            setAccessOpen(false);
+          }}
+        />
+      )}
+
       {/* MENU MOBILE */}
       {menuOpen && (
-        <div className="fixed inset-0 bg-laranja text-branco flex flex-col items-center justify-center gap-8 text-2xl z-50">
-
+        <div className="fixed top-0 right-0 h-screen w-[80vw] bg-laranja text-branco flex flex-col items-center justify-center gap-8 text-2xl z-50">
+          
           <button
             onClick={() => {
               setMenuOpen(false);
@@ -102,7 +115,14 @@ export default function Nav({ darkMode, isDark }) {
           ))}
 
           {/* DARK MODE MOBILE */}
-          <button onClick={darkMode} className="mt-4">
+          <button
+            onClick={() => {
+              darkMode();
+              setMenuOpen(false);
+              setAccessOpen(false);
+            }}
+            className="mt-4"
+          >
             {isDark ? <Sun size={30} /> : <MoonStars size={30} />}
           </button>
 
@@ -110,27 +130,33 @@ export default function Nav({ darkMode, isDark }) {
           <div className="relative mt-4">
             <button
               onClick={() => setAccessOpen(!accessOpen)}
-              className="flex items-center gap-2 hover:text-laranjaEscuro"
+              className="text-center"
             >
               <PersonArmsSpread size={30} />
-              Acessibilidade
             </button>
 
             {accessOpen && (
-              <div className="mt-4 w-60 bg-branco dark:bg-[#252525] rounded-md shadow-lg p-3 flex flex-col gap-5 text-base text-preto dark:text-branco">
+              <div className="absolute top-full left-1/2 -translate-x-1/2 mt-4 w-60  bg-branco dark:bg-[#252525] rounded-md shadow-lg p-3 flex flex-col gap-5 text-base text-preto dark:text-branco">
                 <button id="aumentar-texto" className="access-btn flex items-center gap-2">
                   <AArrowUp size={20} /> Aumentar texto
                 </button>
                 <button id="diminuir-texto" className="access-btn flex items-center gap-2">
                   <AArrowDown size={20} /> Diminuir texto
                 </button>
-                <button id="preto-e-branco" className="access-btn flex items-center gap-2">
+                <button id="preto-e-branco" className="access-btn flex items-center gap-2" 
+                  onClick={() => {
+                    setMenuOpen(false);
+                    setAccessOpen(false);
+                  }}
+                >
                   <Eclipse size={20} /> Preto & Branco
                 </button>
               </div>
             )}
           </div>
+          
         </div>
+        
       )}
     </nav>
   );

@@ -4,9 +4,10 @@
 @tailwind components;
 @tailwind utilities;
 
-.preto-e-branco {
+.preto-e-branco #app-content {
   filter: grayscale(100%);
 }
+
 
 html {
   scroll-behavior: smooth;

@@ -14,10 +14,17 @@ export default function Home(){
                 <div className="absolute inset-0 flex items-center justify-start md:ml-[10%] ml-[7%] text-left">
                     <div className='flex flex-col items-start md:items-start'>
                         <h1 className="text-branco cursor-default text-4xl md:text-8xl font-italiana selection:bg-laranja selection:text-branco">Venha<br/>conhecer<br/>nossa loja!</h1>
-                        <button className='selection:bg-branco selection:text-laranja flex text-branco items-center gap-3 bg-laranja rounded-full md:py-3 py-2 px-6 md:px-10 text-base md:text-xl md:mt-[4%] mt-[5%] transition duration-500 transform-cpu hover:scale-105'>
+                        
+                        <a
+                            href={`https://wa.me/551143094666?text=${encodeURIComponent(
+                                "Olá! Gostaria de saber mais sobre o catálogo disponível na loja!"
+                            )}`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        ><button className='selection:bg-branco selection:text-laranja flex text-branco items-center gap-3 bg-laranja rounded-full md:py-3 py-2 px-6 md:px-10 text-base md:text-xl md:mt-[4%] mt-[5%] transition duration-500 transform-cpu hover:scale-105'>
                             <BookOpenText weight='light' className='md:text-3xl text-xl'/>
                             Acesse o catálogo completo
-                        </button>
+                        </button></a>
                     </div>
                 </div>
             </div>
@@ -71,9 +78,17 @@ export default function Home(){
                         />
                     </div>
 
-                    <div className='w-full flex justify-center md:mt-[5%] mt-[35%]'>
-                        <button className='selection:bg-laranja selection:text-branco
-                        text-laranja bg-branco rounded-full py-4 text-base md:text-xl px-10 md:px-20 transition duration-500 transform-cpu hover:scale-105'>Veja nosso catálogo completo</button>
+                    <div className='w-full flex justify-center md:mt-[4%] mt-[35%]'>
+                        <a
+                            href={`https://wa.me/551143094666?text=${encodeURIComponent(
+                                "Olá! Gostaria de saber mais sobre o catálogo disponível na loja!"
+                            )}`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <button className='selection:bg-laranja selection:text-branco
+                            text-laranja bg-branco rounded-full py-4 text-base md:text-xl px-10 md:px-20 transition duration-500 transform-cpu hover:scale-105'>Veja nosso catálogo completo</button>
+                        </a>
                     </div>
                 </div>
 
