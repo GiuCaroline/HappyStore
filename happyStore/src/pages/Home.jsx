@@ -8,13 +8,13 @@ export default function Home(){
             <div className="relative w-full h-auto" id='home'>
                 <img 
                     src="./images/banner.jpeg"
-                    className="w-full h-[80vh] object-cover selection:bg-branco"
+                    className="w-full h-[50vh] md:h-[80vh] object-cover selection:bg-branco"
                 />
                 <div className="absolute inset-0 bg-black/40 selection:bg-branco"></div>
                 <div className="absolute inset-0 flex items-center justify-center md:justify-start md:ml-[10%] text-left">
-                    <div className='flex flex-col items-center md:items-start'>
+                    <div className='flex flex-col items-start md:items-start'>
                         <h1 className="text-branco cursor-default text-4xl md:text-8xl font-italiana selection:bg-laranja selection:text-branco">Venha<br/>conhecer<br/>nossa loja!</h1>
-                        <button className='selection:bg-branco selection:text-laranja flex text-branco items-center gap-3 text-xl bg-laranja rounded-full py-3 px-6 md:px-10 text-base md:text-xl mt-[4%] transition duration-500 transform-cpu hover:scale-105'>
+                        <button className='selection:bg-branco selection:text-laranja flex text-branco items-center gap-3 text-lg bg-laranja rounded-full py-3 px-6 md:px-10 text-base md:text-xl md:mt-[4%] mt-[5%] transition duration-500 transform-cpu hover:scale-105'>
                             <BookOpenText weight='light' size={30}/>
                             Acesse o catálogo completo
                         </button>
@@ -23,7 +23,7 @@ export default function Home(){
             </div>
 
             <div className='max-w-screen mx-auto'>
-                <div className='mt-[3%] px-[3%]' id='sobre'>
+                <div className='md:mt-[3%] mt-[8%] px-[3%]' id='sobre'>
                     <div className='flex items-center gap-3'>
                         <div className="w-[10%] flex-1 h-[1px] dark:bg-branco bg-preto rounded-full
                         selection:bg-laranja selection:text-branco"></div>
@@ -35,11 +35,11 @@ export default function Home(){
 
                     <div className='flex flex-col md:flex-row items-center md:justify-between gap-8 mt-6'>
                         <p className='dark:text-branco text-preto text-lg md:text-2xl text-center md:text-left md:ml-[5%]
-                        selection:bg-laranja selection:text-branco cursor-default'>A HAPPY Store nasceu para levar mais estilo e<br/>
-                        felicidade ao seu dia a dia. Trabalhamos com moda<br/>
-                        feminina, masculina e infantil, unindo qualidade,<br/>
-                        conforto e tendências que valorizam cada estilo.<br/>
-                        Porque quando você se sente bem com o que veste,<br/>
+                        selection:bg-laranja selection:text-branco cursor-default'>A HAPPY Store nasceu para levar mais estilo e
+                        felicidade ao seu dia a dia. Trabalhamos com moda
+                        feminina, masculina e infantil, unindo qualidade,
+                        conforto e tendências que valorizam cada estilo.
+                        Porque quando você se sente bem com o que veste,
                         a felicidade aparece naturalmente.</p>
 
                         <img 
@@ -49,9 +49,9 @@ export default function Home(){
                     </div>
                 </div>
 
-                <div className='bg-laranja w-full mt-[6%] p-5 py-10' id='catalogo'>
-                    <p className='justify-center flex cursor-default text-branco underline italic text-2xl selection:bg-branco selection:text-laranja'>Conheça um pouco das nossas roupas</p>
-                    <div className="mt-[3%] grid grid-cols-1 md:grid-cols-3 gap-[10%] max-w-6xl mx-auto">
+                <div className='bg-laranja w-full md:mt-[6%] mt-[10%] p-5 md:py-10' id='catalogo'>
+                    <p className='justify-center flex text-center cursor-default text-branco underline italic text-2xl selection:bg-branco selection:text-laranja'>Conheça um pouco das nossas roupas</p>
+                    <div className="mt-[3%] grid grid-cols-1 md:grid-cols-3 md:gap-[10%] gap-[4%] max-w-xs md:max-w-6xl mx-auto">
                         <ProductCard
                         image="/images/vestido.png"
                         title="Vestido Azul"
@@ -71,14 +71,14 @@ export default function Home(){
                         />
                     </div>
 
-                    <div className='w-full flex justify-center mt-[5%]'>
+                    <div className='w-full flex justify-center md:mt-[5%] mt-[35%]'>
                         <button className='selection:bg-laranja selection:text-branco
                         text-laranja bg-branco rounded-full py-4 text-base md:text-xl px-10 md:px-20 transition duration-500 transform-cpu hover:scale-105'>Veja nosso catálogo completo</button>
                     </div>
                 </div>
 
-                <div id="endereco" className='mt-[4%] px-[3%]'>
-                    <div className='flex flex-col md:flex-row items-center gap-3'>
+                <div id="endereco" className='md:mt-[4%] mt-[8%] px-[3%] mb-[15%] md:mb-0'>
+                    <div className='flex flex-row items-center gap-3'>
                         <p className='dark:text-branco text-preto text-3xl
                             selection:bg-laranja selection:text-branco cursor-default'>Onde estamos</p>
                         <div className="w-[10%] flex-1 h-[1px] dark:bg-branco bg-preto rounded-full

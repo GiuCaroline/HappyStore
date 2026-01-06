@@ -15,7 +15,7 @@ export default function Footer(){
                     <a href='#home'>
                         <img
                             src="./images/logo.png"
-                            className="cursor-pointer w-[55%] mx-auto lg:mx-0 selection:bg-branco"
+                            className="cursor-pointer md:w-[55%] w-[40%] mt-[5%] md:mt-0 mx-auto lg:mx-0 selection:bg-branco"
                         />
                     </a>
 
@@ -62,11 +62,11 @@ export default function Footer(){
                         Contatos
                     </p>
 
-                    <p className="mt-[7%] text-base cursor-default selection:bg-branco selection:text-laranja">
+                    <p className="md:mt-[7%] mt-[4%] text-base cursor-default selection:bg-branco selection:text-laranja">
                         R. Princesa Isabel 328, Vila<br/>Bocaina, Mauá - SP
                     </p>
 
-                    <div className="mt-[5%] flex justify-center items-center">
+                    <div className="md:mt-[5%] mt-[2%] flex justify-center items-center">
                         <a 
                             href={`https://wa.me/551143094666?text=${encodeURIComponent(
                                 "Olá! Gostaria de saber mais sobre a loja!"
@@ -82,11 +82,11 @@ export default function Footer(){
                         </a>
                     </div>
 
-                    <p className="mt-[10%] underline text-branco text-xl cursor-default selection:bg-branco selection:text-laranja">
+                    <p className="md:mt-[10%] mt-[6%] underline text-branco text-xl cursor-default selection:bg-branco selection:text-laranja">
                         Horário de funcionamento
                     </p>
 
-                    <p className="mt-[7%] text-base cursor-default selection:bg-branco selection:text-laranja">
+                    <p className="md:mt-[7%] mt-[4%] text-base cursor-default selection:bg-branco selection:text-laranja">
                         Seg á sex das 10:00h ás 18:30h<br/>
                         Sáb das 10:00h às 17:30h
                     </p>
@@ -102,7 +102,7 @@ export default function Footer(){
                         href="https://www.instagram.com/lojamodahappystore/"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center justify-center gap-2 text-branco hover:text-laranja mt-[10%]"
+                        className="flex items-center justify-center gap-2 text-branco hover:text-laranja md:mt-[10%] mt-[4%]"
                     >
                         <InstagramLogo size={28}/>
                         <p className="text-base">@lojamodahappystore</p>
@@ -114,7 +114,7 @@ export default function Footer(){
                         )}`}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center justify-center gap-2 text-branco hover:text-laranja mt-[7%]"
+                        className="flex items-center justify-center gap-2 text-branco hover:text-laranja md:mt-[7%] mt-[4%]"
                     >
                         <WhatsappLogo size={28}/>
                         <p className="text-base">Fale conosco</p>
@@ -124,7 +124,7 @@ export default function Footer(){
                         href="https://www.facebook.com/happystoremoda"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center justify-center gap-2 text-branco hover:text-laranja mt-[7%]"
+                        className="flex items-center justify-center gap-2 text-branco hover:text-laranja md:mt-[7%] mt-[4%]"
                     >
                         <FacebookLogo size={28}/>
                         <p className="text-base">@happystoremoda</p>
@@ -133,7 +133,7 @@ export default function Footer(){
             </div>
 
             {/* RODAPÉ FINAL */}
-            <div className="justify-center items-center mt-6">
+            <div className="justify-center items-center md:mt-6 mt-16">
                 <a
                     href="https://github.com/GiuCaroline"
                     target="_blank"
@@ -143,9 +143,9 @@ export default function Footer(){
                     <p className="text-sm">Desenvolvido por Giulia Caroline</p>
                 </a>
 
-                <div className="flex flex-col lg:flex-row justify-center items-center gap-2">
-                    <Copyright size={25} />
-                    <p className="text-lg cursor-default selection:bg-branco selection:text-laranja">
+                <div className="flex flex-row justify-center items-center md:gap-2">
+                    <Copyright size={25}/>
+                    <p className="text-lg text-center cursor-default selection:bg-branco selection:text-laranja">
                         2025 HAPPY Store • Todos os direitos reservados
                     </p>
                 </div>

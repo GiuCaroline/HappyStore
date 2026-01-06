@@ -11,11 +11,11 @@ export default function Nav({ darkMode, isDark }) {
     <nav className="fixed top-0 left-0 w-full z-50 bg-laranja shadow-xl font-montserrat py-1">
       
       {/* NAVBAR */}
-      <div className="flex items-center justify-between px-4 py-4 md:px-8">
+      <div className="flex items-center justify-between px-4 py-2 md:py-4 md:px-8">
 
         {/* LOGO */}
         <a href="#home">
-          <img src="./images/logo.png" className=" cursor-pointer selection:bg-branco" />
+          <img src="./images/logo.png" className="h-8 md:h-auto cursor-pointer selection:bg-branco" />
         </a>
 
         <ul className="hidden md:flex gap-10 items-center text-branco">

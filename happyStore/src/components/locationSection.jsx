@@ -8,8 +8,8 @@ export default function LocationSection() {
 
   return (
     <section className="
-      dark:bg-[#252525] bg-[#F3F3F3] w-full mt-[2%]
-      rounded-[30px] px-[4%] py-[2%]
+      dark:bg-[#252525] bg-[#F3F3F3] w-full md:mt-[2%] mt-[8%]
+      rounded-[30px] md:px-[4%] px-[6%] md:py-[2%] py-[5%]
       grid grid-cols-1 md:grid-cols-2 gap-8
       font-montserrat shadow-xl mb-[5%]
     ">
@@ -84,15 +84,15 @@ export default function LocationSection() {
 
       {/* TEXTO FINAL */}
       <p className="
-        text-xl dark:text-branco text-preto flex gap-1 items-center
-        cursor-default mt-4
+        text-xl dark:text-branco text-preto md:flex-row flex flex-col  gap-1 items-center
+        cursor-default md:mt-4
         w-full text-center justify-center
         lg:w-[200%] lg:text-left lg:justify-start
         selection:dark:text-laranja selection:dark:bg-branco
         selection:text-branco selection:bg-laranja
       ">
         Esperamos você para conhecer nossa coleção e sair vestindo
-        <span className="text-laranja flex gap-2 items-center
+        <span className="text-laranja flex flex-row gap-2 items-center
           selection:text-branco selection:bg-laranja">
           felicidade <Sparkle size={25} />
         </span>
