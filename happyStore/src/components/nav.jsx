@@ -32,34 +32,34 @@ export default function Nav({darkMode, isDark}){
                 <MoonStars size={30} className="text-branco hover:text-laranjaEscuro cursor-pointer"/>
                 }
               </button>
-                <div className="relative">
-            <button
-              onClick={() => setOpen(!open)}
-              className="hover:text-laranjaEscuro transition cursor-pointer text-branco"
-            >
-              <PersonArmsSpread size={29} />
-            </button>
-
-            {open && (
-              <div className="absolute right-0 mt-2 w-48 dark:bg-[#252525] bg-[#f3f3f3] rounded-md shadow-lg p-2 flex flex-col gap-2 z-50">
-
-                <button id="aumentar-texto" className="cursor-pointer p-2 rounded hover:bg-laranja flex items-center gap-2 dark:text-branco text-preto 
-                selection:bg-laranja selection:text-branco selection:dark:bg-branco selection:dark:text-laranja">
-                  <AArrowUp size={18}/> Aumentar texto
+              <div className="relative">
+                <button
+                  onClick={() => setOpen(!open)}
+                  className="hover:text-laranjaEscuro transition cursor-pointer text-branco"
+                >
+                  <PersonArmsSpread size={29} />
                 </button>
 
-                <button id="diminuir-texto" className="cursor-pointer p-2 rounded hover:bg-laranja flex items-center gap-2 dark:text-branco text-preto 
-                selection:bg-laranja selection:text-branco selection:dark:bg-branco selection:dark:text-laranja">
-                  <AArrowDown size={18}/> Diminuir texto
-                </button>
+                {open && (
+                  <div className="absolute right-0 mt-2 w-48 dark:bg-[#252525] bg-[#f3f3f3] rounded-md shadow-lg p-2 flex flex-col gap-2 z-50">
 
-                <button id="preto-e-branco" className="cursor-pointer p-2 rounded hover:bg-laranja flex items-center gap-2 dark:text-branco text-preto 
-                selection:bg-laranja selection:text-branco selection:dark:bg-branco selection:dark:text-laranja">
-                  <Eclipse size={18}/> Preto & Branco
-                </button>
-              </div>
-            )}
-          </div>
+                    <button id="aumentar-texto" className="cursor-pointer p-2 rounded hover:bg-laranja flex items-center gap-2 dark:text-branco text-preto 
+                    selection:bg-laranja selection:text-branco selection:dark:bg-branco selection:dark:text-laranja">
+                      <AArrowUp size={18}/> Aumentar texto
+                    </button>
+
+                    <button id="diminuir-texto" className="cursor-pointer p-2 rounded hover:bg-laranja flex items-center gap-2 dark:text-branco text-preto 
+                    selection:bg-laranja selection:text-branco selection:dark:bg-branco selection:dark:text-laranja">
+                      <AArrowDown size={18}/> Diminuir texto
+                    </button>
+
+                    <button id="preto-e-branco" className="cursor-pointer p-2 rounded hover:bg-laranja flex items-center gap-2 dark:text-branco text-preto 
+                    selection:bg-laranja selection:text-branco selection:dark:bg-branco selection:dark:text-laranja">
+                      <Eclipse size={18}/> Preto & Branco
+                    </button>
+                  </div>
+                )}
+            </div>
           </div>
 
           
