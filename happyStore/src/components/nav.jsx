@@ -15,7 +15,7 @@ export default function Nav({ darkMode, isDark }) {
 
         {/* LOGO */}
         <a href="#home">
-          <img src="./images/logo.png" className="h-8 md:h-auto cursor-pointer selection:bg-branco" />
+          <img src="./images/logo.png" className="h-15 md:h-auto cursor-pointer selection:bg-branco" />
         </a>
 
         <ul className="hidden md:flex gap-10 items-center text-branco">

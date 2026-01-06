@@ -11,11 +11,11 @@ export default function Home(){
                     className="w-full h-[50vh] md:h-[80vh] object-cover selection:bg-branco"
                 />
                 <div className="absolute inset-0 bg-black/40 selection:bg-branco"></div>
-                <div className="absolute inset-0 flex items-center justify-center md:justify-start md:ml-[10%] text-left">
+                <div className="absolute inset-0 flex items-center justify-start md:ml-[10%] ml-[7%] text-left">
                     <div className='flex flex-col items-start md:items-start'>
                         <h1 className="text-branco cursor-default text-4xl md:text-8xl font-italiana selection:bg-laranja selection:text-branco">Venha<br/>conhecer<br/>nossa loja!</h1>
-                        <button className='selection:bg-branco selection:text-laranja flex text-branco items-center gap-3 text-lg bg-laranja rounded-full py-3 px-6 md:px-10 text-base md:text-xl md:mt-[4%] mt-[5%] transition duration-500 transform-cpu hover:scale-105'>
-                            <BookOpenText weight='light' size={30}/>
+                        <button className='selection:bg-branco selection:text-laranja flex text-branco items-center gap-3 bg-laranja rounded-full md:py-3 py-2 px-6 md:px-10 text-base md:text-xl md:mt-[4%] mt-[5%] transition duration-500 transform-cpu hover:scale-105'>
+                            <BookOpenText weight='light' className='md:text-3xl text-xl'/>
                             Acesse o catálogo completo
                         </button>
                     </div>
@@ -51,7 +51,7 @@ export default function Home(){
 
                 <div className='bg-laranja w-full md:mt-[6%] mt-[10%] p-5 md:py-10' id='catalogo'>
                     <p className='justify-center flex text-center cursor-default text-branco underline italic text-2xl selection:bg-branco selection:text-laranja'>Conheça um pouco das nossas roupas</p>
-                    <div className="mt-[3%] grid grid-cols-1 md:grid-cols-3 md:gap-[10%] gap-[4%] max-w-xs md:max-w-6xl mx-auto">
+                    <div className="mt-[3%] grid grid-cols-1 md:grid-cols-3 md:gap-[10%] gap-[9%] max-w-xs md:max-w-6xl mx-auto">
                         <ProductCard
                         image="/images/vestido.png"
                         title="Vestido Azul"

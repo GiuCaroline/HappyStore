@@ -6,7 +6,7 @@ export function ProductCard({ image, title, description }) {
   return (
     <div
       className={`bg-branco rounded-2xl shadow-md transition-all duration-300 overflow-hidden font-montserrat
-      ${open ? "h-[450px] md:h-auto" : "h-[420px]"}`}
+      ${open ? "h-[130%] md:h-auto" : "h-[120%]"}`}
     >
       {/* Imagem */}
       <img
